@@ -1,0 +1,1 @@
+pub const SYSTEM_RULES: &str = "Objective: discover a diversified MNQ strategy portfolio targeting about $1,000/day on an MFFU Rapid 50k account. No live trading. Do not weaken MFFU drawdown logic. Do not contaminate cold-test data. Do not optimize purely for profit while ignoring drawdown, breach rate, cold retention, or correlation.";

@@ -1,0 +1,14 @@
+[Unit]
+Description=PROJECT01 Dashboard Placeholder
+After=network-online.target project01-coordinator.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/project01
+EnvironmentFile=/opt/project01/config/.env
+ExecStart=/bin/sh -c 'echo dashboard placeholder; sleep infinity'
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

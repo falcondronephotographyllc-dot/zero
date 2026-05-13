@@ -1,0 +1,8 @@
+[cluster]
+pi = "100.x.y.pi"
+starscream = "100.x.y.starscream"
+megatron = "100.x.y.megatron"
+optimus = "100.x.y.optimus"
+
+[coordinator]
+api_url = "http://100.x.y.pi:8080/api"

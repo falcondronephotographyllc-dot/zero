@@ -1,0 +1,10 @@
+[ollama]
+primary_node = "MEGATRON"
+base_url = "http://MEGATRON_TAILSCALE_IP:11434"
+default_model = "project01-brain"
+
+[openai]
+enabled = false
+monthly_budget_usd = 5
+daily_hard_limit_usd = 0.25
+escalation_only = true

@@ -1,0 +1,11 @@
+[node]
+name = "STARSCREAM"
+role = "dev_flex_worker"
+worker_mode = "dev_only"
+
+[paths]
+root = "/opt/project01"
+state_dir = "/opt/project01/state"
+log_dir = "/opt/project01/logs"
+data_dir = "/opt/project01/data"
+output_dir = "/opt/project01/output"

@@ -1,0 +1,15 @@
+[Unit]
+Description=PROJECT01 Distributed Worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/project01
+EnvironmentFile=/opt/project01/config/.env
+ExecStart=/opt/project01/target/release/project01 worker --node ${PROJECT01_NODE_NAME} --mode ${PROJECT01_WORKER_MODE}
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

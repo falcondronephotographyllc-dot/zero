@@ -1,0 +1,15 @@
+[Unit]
+Description=PROJECT01 Health Monitor
+After=network-online.target project01-coordinator.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/project01/coordinator
+EnvironmentFile=/opt/project01/config/.env
+ExecStart=/opt/project01/coordinator/.venv/bin/python -m app.health
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

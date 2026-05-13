@@ -1,0 +1,36 @@
+[objective]
+account = "MFFU Rapid 50k"
+instrument = "MNQ"
+combined_daily_target = 1000
+optimize_for = "portfolio"
+single_moonshot_preferred = false
+
+[single_strategy_targets]
+minimum_useful_profit_per_contract = 200
+strong_profit_low_per_contract = 200
+strong_profit_high_per_contract = 400
+exceptional_profit_per_contract = 1000
+preferred_intraday_drawdown_per_contract = 800
+minimum_cold_retention = 0.80
+preferred_mffu_breach_rate = 0.0
+
+[portfolio_targets]
+low_correlation = true
+avoid_compounding_intraday_drawdown = true
+avoid_same_session_loss_overlap = true
+avoid_same_regime_loss_overlap = true
+reject_if_combined_drawdown_unsafe = true
+
+[fitness_priority]
+order = [
+  "survive_mffu_rules",
+  "avoid_hard_drawdown_breaches",
+  "keep_intraday_drawdown_low",
+  "keep_daily_loss_low",
+  "maintain_high_cold_test_retention",
+  "avoid_train_validation_cold_decay",
+  "maintain_stable_daily_profit",
+  "prefer_reasonable_trade_frequency",
+  "prefer_low_correlation_with_archive_winners",
+  "scale_toward_account_daily_target",
+]

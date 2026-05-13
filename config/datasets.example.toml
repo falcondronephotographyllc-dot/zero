@@ -1,0 +1,5 @@
+[dataset]
+ohlcv_path = "/opt/project01/data/mnq_1m.csv"
+bbo_path = "/opt/project01/data/mnq_bbo_1m.csv"
+start = "2015-02-24"
+end = "2026-03-24"
